@@ -3,4 +3,8 @@ Keras
 opencv-python-headless
 numpy
 streamlit
-
+pyngrok
+patool
+gdown
+scikit-learn
+sklearn
