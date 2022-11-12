@@ -1,5 +1,5 @@
 ##  Malaria Diagnosis ML App
-A Streamlit app that uses Machine Learning model to classify objects from images.
+A Streamlit app that uses Machine Learning model to classify objects from images. Made by Athulya Saravanakumar. 
 
 ## About
 Globally, billions of people own smartphones, which means that ML apps can help diagnose and treat large numbers of people!
@@ -20,4 +20,4 @@ streamlit run streamlit_app.py
 With streamlit and streamlit cloud, the app was built and deployed.
 Streamlit is an open source app framework in the Python language. It allows us to create data science and machine learning web apps quickly. 
 
-
+###Streamlit framework by Neji
