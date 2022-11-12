@@ -19,17 +19,17 @@ from sklearn.model_selection import train_test_split
 from sklearn.svm import SVC
 
 ngrok_process = ngrok.get_ngrok_process()
-DATA_ROOT = '/content'
+# DATA_ROOT = '/content'
 # os.makedirs(DATA_ROOT, exist_ok=True)
 max_samples = 3000
 
-blood_slide_url = 'https://drive.google.com/uc?id=1lffxAG8gykh1dh1pCP34uRkH3XMwuNt-'
-blood_slide_path = os.path.join(DATA_ROOT, 'blood_slide.jpg')
-gdown.download(blood_slide_url, blood_slide_path, True)
+# blood_slide_url = 'https://drive.google.com/uc?id=1lffxAG8gykh1dh1pCP34uRkH3XMwuNt-'
+# blood_slide_path = os.path.join(DATA_ROOT, 'blood_slide.jpg')
+# gdown.download(blood_slide_url, blood_slide_path, True)
 
-malaria_imgs_path = os.path.join(DATA_ROOT, './malaria_images')
+# malaria_imgs_path = os.path.join(DATA_ROOT, './malaria_images')
 
-print("Downloaded Data")
+# print("Downloaded Data")
 
 u_malaria_img_paths = glob.glob('./malaria_images/Uninfected/*.png')
 p_malaria_img_paths = glob.glob('./malaria_images/Parasitized/*.png')
