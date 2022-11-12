@@ -95,7 +95,7 @@ st.image("./malaria_images/Uninfected/good.png")
 
 
 #Uploading the blood cell image
-object_image = st.file_uploader("Upload Blood Cell Sample", type=['png','jpg','webp','jpeg'])
+object_image = st.file_uploader("""Upload Blood Cell Sample""", type=['png','jpg','webp','jpeg'])
 submit = st.button('Diagnose')
 
 #On predict button click
