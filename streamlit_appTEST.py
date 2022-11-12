@@ -20,8 +20,8 @@ from sklearn.svm import SVC
 
 ngrok_process = ngrok.get_ngrok_process()
 DATA_ROOT = '/content'
-os.makedirs(DATA_ROOT, exist_ok=True)
-max_samples = 10
+# os.makedirs(DATA_ROOT, exist_ok=True)
+max_samples = 3000
 
 blood_slide_url = 'https://drive.google.com/uc?id=1lffxAG8gykh1dh1pCP34uRkH3XMwuNt-'
 blood_slide_path = os.path.join(DATA_ROOT, 'blood_slide.jpg')
@@ -65,18 +65,17 @@ X_reshaped = np.reshape(X_g,(X_g.shape[0],2500))
 
 y = np.array(y)
 
-blood_samples_dir = 'blood_samples'
-if (os.path.exists(blood_samples_dir) == False):
-  os.mkdir(blood_samples_dir)
+# blood_samples_dir = 'blood_samples'
+# if (os.path.exists(blood_samples_dir) == False):
+#   os.mkdir(blood_samples_dir)
 
-for i, img in enumerate(X[2995:3005]):
-  plt.imsave('test_img_{}.jpg'.format(i), img)
+# for i, img in enumerate(X[2995:3005]):
+#   plt.imsave('test_img_{}.jpg'.format(i), img)
   
 X_train, X_test, y_train, y_test = train_test_split(X_reshaped, y, test_size=.33, random_state=4)
 
 model = SVC()
 model.fit(X_train, y_train)
-
 
 st.image('malaria.jpg')
 st.markdown("## Health Care at Your Fingertips")
@@ -88,13 +87,17 @@ Infecting over 200 million people every year, malaria kills more than 200,000 ch
 
 **Made by Athulya Saravanakumar**
 """)
-
+st.markdown("""Example of Parasitized Blood Sample""")
+st.image("./malaria_images/Parasitized/infected.png")
+st.markdown("""Example of Uninfected Blood Cell Sample""")
+st.image("./malaria_images/Uninfected/good.png")
 #Name of Classes
 
 
 #Uploading the blood cell image
 object_image = st.file_uploader("Upload Blood Cell Sample", type=['png','jpg','webp','jpeg'])
 submit = st.button('Diagnose')
+
 #On predict button click
 if submit:
 
@@ -126,4 +129,4 @@ if submit:
 
         # Displaying the image
         #st.image(object_image, channels="BGR")
-        st.markdown("""Diagnosis: """ +  predicted_classes)
+        st.markdown("Diagnosis: " +  predicted_classes)
