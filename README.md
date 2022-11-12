@@ -20,4 +20,4 @@ streamlit run streamlit_app.py
 With streamlit and streamlit cloud, the app was built and deployed.
 Streamlit is an open source app framework in the Python language. It allows us to create data science and machine learning web apps quickly. 
 
-###Streamlit framework by Neji
+### Streamlit framework by Neji
